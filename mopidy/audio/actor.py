@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # set_state() on a pipeline.
 gst_logger = logging.getLogger('mopidy.audio.gst')
 
-_GST_PLAY_FLAGS_AUDIO = 0x02
+_GST_PLAY_FLAGS_AUDIO = 0x02 + 0x80
 
 _GST_STATE_MAPPING = {
     Gst.State.PLAYING: PlaybackState.PLAYING,
